@@ -37,7 +37,7 @@ public final class WallMovement {
     public static void tick(Minecraft mc) {
         LocalPlayer p = mc.player;
         FlowConfig c = FlowConfig.get();
-        if (p == null || mc.level == null || mc.screen != null || !c.enabled) {
+           if (p == null || mc.level == null || !c.enabled) {
             prevJump = false;
             resetWallState();
             return;
