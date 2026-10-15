@@ -20,6 +20,7 @@ jobs:
           gradle-version: current
 
       - name: Build
+        working-directory: flowrunner
         run: gradle build --no-daemon
 
       - name: Upload jar
@@ -27,5 +28,5 @@ jobs:
         with:
           name: flowrunner-jar
           path: |
-            build/libs/flowrunner-*.jar
-            !build/libs/*-sources.jar
+            flowrunner/build/libs/flowrunner-*.jar
+            !flowrunner/build/libs/*-sources.jar
